@@ -21,4 +21,14 @@ public class FindMaximum {
         }
         return maximum;
     }
+    public String maximumOfString(String firstString, String secondString, String ThirdString) {
+        String maximum = firstString;
+        if (secondString.compareTo(maximum) > 0) {
+            maximum = secondString;
+        }
+        if (ThirdString.compareTo(maximum) > 0) {
+            maximum = ThirdString;
+        }
+        return maximum;
+    }
 }

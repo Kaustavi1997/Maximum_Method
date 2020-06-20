@@ -28,5 +28,17 @@ public class FindMaximumTest {
     public void maxFloatAtThirdPosition() {
         Assert.assertEquals((Double)98.2,(Double)findMaximum.maximumOfFloat(0.9, 45.9,98.2));
     }
+    @Test
+    public void maxStringAtFirstPosition() {
+        Assert.assertEquals((String) "Grape",(String)findMaximum.maximumOfString("Grape", "Banana","Apple"));
+    }
+    @Test
+    public void maxStringAtSecondPosition() {
+        Assert.assertEquals((String)"panda",(String)findMaximum.maximumOfString("dog", "panda","cat"));
+    }
+    @Test
+    public void maxStringAtThirdPosition() {
+        Assert.assertEquals((String) "pune",(String)findMaximum.maximumOfString("bangalore", "kolkata","pune"));
+    }
 
 }
