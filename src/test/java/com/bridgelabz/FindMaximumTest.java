@@ -3,42 +3,44 @@ import org.junit.Test;
 import org.junit.Assert;
 
 public class FindMaximumTest {
-    FindMaximum findMaximum = new FindMaximum();
     @Test
     public void maxNumberAtFirstPosition() {
-        Assert.assertEquals(45,(int)findMaximum.maximumElement(45, 30,20));
+        Assert.assertEquals(45,new FindMaximum(45, 30,20).maximum());
     }
+
     @Test
     public void maxNumberAtSecondPosition() {
-        Assert.assertEquals(100,(int)findMaximum.maximumElement(90, 100,73));
+        Assert.assertEquals(100,new FindMaximum(90, 100,73).maximum());
     }
     @Test
     public void maxNumberAtThirdPosition() {
-        Assert.assertEquals(76,(int)findMaximum.maximumElement(45, 30,76));
+        Assert.assertEquals(76,new FindMaximum(45, 30,76).maximum());
     }
     @Test
     public void maxFloatAtFirstPosition() {
-        Assert.assertEquals((Double) 23.9,(Double)findMaximum.maximumElement(23.9, 3.9,2.5));
+        Assert.assertEquals(23.9,new FindMaximum(23.9, 3.9,2.5).maximum());
     }
+
     @Test
     public void maxFloatAtSecondPosition() {
-        Assert.assertEquals((Double)8.4,(Double)findMaximum.maximumElement(6.7, 8.4,2.5));
+        Assert.assertEquals(8.4,new FindMaximum(6.7, 8.4,2.5).maximum());
     }
     @Test
     public void maxFloatAtThirdPosition() {
-        Assert.assertEquals((Double)98.2,(Double)findMaximum.maximumElement(0.9, 45.9,98.2));
+        Assert.assertEquals(98.2,new FindMaximum(0.9, 45.9,98.2).maximum());
     }
     @Test
     public void maxStringAtFirstPosition() {
-        Assert.assertEquals((String) "Grape",(String)findMaximum.maximumElement("Grape", "Banana","Apple"));
+        Assert.assertEquals("Grape",new FindMaximum("Grape", "Banana","Apple").maximum());
     }
+
     @Test
     public void maxStringAtSecondPosition() {
-        Assert.assertEquals((String)"panda",(String)findMaximum.maximumElement("dog", "panda","cat"));
+        Assert.assertEquals("panda",new FindMaximum("dog", "panda","cat").maximum());
     }
     @Test
     public void maxStringAtThirdPosition() {
-        Assert.assertEquals((String) "pune",(String)findMaximum.maximumElement("bangalore", "kolkata","pune"));
+        Assert.assertEquals("pune",new FindMaximum("bangalore", "kolkata","pune").maximum());
     }
 
 }
