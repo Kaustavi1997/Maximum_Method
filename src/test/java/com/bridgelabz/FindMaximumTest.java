@@ -16,5 +16,17 @@ public class FindMaximumTest {
     public void maxNumberAtThirdPosition() {
         Assert.assertEquals(76,(int)findMaximum.maximum(45, 30,76));
     }
+    @Test
+    public void maxFloatAtFirstPosition() {
+        Assert.assertEquals((Double) 23.9,(Double)findMaximum.maximumOfFloat(23.9, 3.9,2.5));
+    }
+    @Test
+    public void maxFloatAtSecondPosition() {
+        Assert.assertEquals((Double)8.4,(Double)findMaximum.maximumOfFloat(6.7, 8.4,2.5));
+    }
+    @Test
+    public void maxFloatAtThirdPosition() {
+        Assert.assertEquals((Double)98.2,(Double)findMaximum.maximumOfFloat(0.9, 45.9,98.2));
+    }
 
 }
