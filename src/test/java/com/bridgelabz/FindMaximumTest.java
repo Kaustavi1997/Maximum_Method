@@ -6,25 +6,19 @@ public class FindMaximumTest {
 
     @Test
     public void maxInt() {
-        Integer[] arr = {13, 7, 6, 45, 21, 9, 200, 100};
-        FindMaximum findMaximum = new FindMaximum(arr);
+        FindMaximum findMaximum = new FindMaximum(13, 7, 6, 45, 21, 9, 200, 100);
         Assert.assertEquals(200,(int)findMaximum.getMaximum());
-        findMaximum.printMaximum();
     }
 
     @Test
     public void maxDouble() {
-        Double[] arr = {2.62,1.32,5.987,4.43};
-        FindMaximum findMaximum = new FindMaximum(arr);
+        FindMaximum findMaximum = new FindMaximum(2.62,1.32,5.987,4.43);
         Assert.assertEquals((Double)5.987,(Double)findMaximum.getMaximum());
-        findMaximum.printMaximum();
     }
 
     @Test
     public void maxString() {
-        String[] arr = {"kolkata","bengaluru","delhi","pune","mumbai"};
-        FindMaximum findMaximum = new FindMaximum(arr);
+        FindMaximum findMaximum = new FindMaximum("kolkata","bengaluru","delhi","pune","mumbai");
         Assert.assertEquals((String) "pune",(String) findMaximum.getMaximum());
-        findMaximum.printMaximum();
     }
 }

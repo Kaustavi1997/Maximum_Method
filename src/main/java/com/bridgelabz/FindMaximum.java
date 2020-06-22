@@ -2,16 +2,22 @@ package com.bridgelabz;
 import java.util.Arrays;
 
 public class FindMaximum<T extends Comparable<T>>{
-    T[] arr;
-    public FindMaximum(T[] arr){
-        this.arr = arr;
+    private final T[] arguments;
+    public FindMaximum(T... arguments){
+        this.arguments = arguments;
     }
-    public T getMaximum() {
-        Arrays.sort(arr);
-        return arr[arr.length-1];
+    public T getMaximum(){
+        return FindMaximum.getMaximum(arguments);
+    }
+    public static <T> T getMaximum(T... arguments) {
+        T maximumValue;
+        Arrays.sort(arguments);
+        maximumValue = arguments[arguments.length-1];
+        printMaximum(maximumValue);
+        return maximumValue;
     }
 
-    public void printMaximum(){
-        System.out.println(arr[arr.length-1]);
+    public static <T> void printMaximum(T maximumValue){
+        System.out.println("Maximum value:"+maximumValue);
     }
 }
